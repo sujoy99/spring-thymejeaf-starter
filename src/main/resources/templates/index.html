@@ -47,6 +47,15 @@
 
     <div th:replace="fragments/components :: menu"></div>
 
+    <!--Option 1-->
+    <div th:replace="fragments/components :: name(${#authentication.principal.username} , ${#authentication.principal.authorities})"></div>
+    <!--    get logged in user info-->
+    <span th:text="${#authentication.getPrincipal()}"></span>
+    <div th:replace="fragments/components :: name(${#authentication.getPrincipal().getUsername()} , ${#authentication.principal.authorities})"></div>
+
+    <!--Option 2-->
+    <div th:replace="fragments/components :: name(email='John', role='Doe')"></div>
+
     <div th:replace="fragments/components :: footer"></div>
 
 </div>

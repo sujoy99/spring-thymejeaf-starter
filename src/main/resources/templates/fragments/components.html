@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
 <header th:fragment="header">
@@ -12,6 +12,12 @@
     <a th:href="@{/blog}">Blog</a>
     <a th:href="@{/contact}">Contact</a>
 </nav>
+
+<div th:fragment="name(email, role)">
+    <p>
+        Hey! I'm <span th:text="${email + ' ' + role}"></span>!
+    </p>
+</div>
 
 <footer th:fragment="footer">
     <p>&copy; 2020 starter.com</p>

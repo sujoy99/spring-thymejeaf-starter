@@ -41,6 +41,9 @@
     <h1>This is homepage</h1>
 
     Welcome <span sec:authentication="principal.username">User</span>
+
+<!--    <div th:insert="fragments/footer :: footer"></div>-->
+    <div th:replace="fragments/footer :: footer"></div>
 </div>
 </body>
 </html>

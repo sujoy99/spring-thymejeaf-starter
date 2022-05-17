@@ -42,8 +42,13 @@
 
     Welcome <span sec:authentication="principal.username">User</span>
 
-<!--    <div th:insert="fragments/footer :: footer"></div>-->
-    <div th:replace="fragments/footer :: footer"></div>
+    <!--    multiple fragment in one file-->
+    <div th:replace="fragments/components :: header"></div>
+
+    <div th:replace="fragments/components :: menu"></div>
+
+    <div th:replace="fragments/components :: footer"></div>
+
 </div>
 </body>
 </html>

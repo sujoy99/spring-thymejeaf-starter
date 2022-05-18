@@ -59,8 +59,11 @@
     <div th:replace="fragments/components :: footer"></div>
 
     <hr>
-
-    <div th:replace="fragments/footer :: footer"></div>
+    <span>Show Text according to Authorization</span>
+    <!--Option 1-->
+    <div th:replace="fragments/footer :: default-footer"></div>
+    <!--Option 2-->
+    <div th:replace="${#authorization.expression('hasRole(''ROLE_ADMIN'')')} ? ~{fragments/footer :: admin-footer } : ~{fragments/footer :: user-footer}"></div>
 
 
 </div>

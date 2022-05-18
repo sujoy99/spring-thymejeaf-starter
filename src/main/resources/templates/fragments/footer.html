@@ -4,14 +4,20 @@
 <body>
 
 <!--default footer-->
-<footer th:fragment="footer">
-    <p sec:authorize="hasRole('ROLE_USER')">&copy; 2020 starter.com</p>
-    <p sec:authorize="hasRole('ROLE_ADMIN')">&copy; 2020 Admin starter.com</p>
+<footer th:fragment="default-footer">
+    <span>Option One</span>
+    <p sec:authorize="hasRole('ROLE_USER')">default footer : &copy; 2020 starter.com</p>
+    <p sec:authorize="hasRole('ROLE_ADMIN')">default admin footer : &copy; 2020 Admin starter.com</p>
 </footer>
 
 <!--admin footer-->
-<!--<footer th:fragment="admin-footer">-->
-<!--    <p>&copy; 2020 Admin starter.com</p>-->
-<!--</footer>-->
+<footer th:fragment="admin-footer">
+    <p>admin footer : &copy; 2020 Admin starter.com</p>
+</footer>
+
+<!--user footer-->
+<footer th:fragment="user-footer">
+    <p>user footer : &copy; 2022 starter.com</p>
+</footer>
 </body>
 </html>

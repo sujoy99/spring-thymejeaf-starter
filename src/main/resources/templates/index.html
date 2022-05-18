@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
@@ -57,6 +57,11 @@
     <div th:replace="fragments/components :: name(email='John', role='Doe')"></div>
 
     <div th:replace="fragments/components :: footer"></div>
+
+    <hr>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
 
 </div>
 </body>

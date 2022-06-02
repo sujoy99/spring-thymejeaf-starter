@@ -1,0 +1,37 @@
+<!--<head th:fragment="baseHead(title, links)">-->
+
+<!--    <title th:replace="${title}">Atta | Founder. Developer. Blogger.</title>-->
+
+<!--    &lt;!&ndash; default styles and scripts &ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="shortcut icon" th:href="@{/images/favicon.ico}">&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">&ndash;&gt;-->
+<!--&lt;!&ndash;    <script th:src="@{/js/jquery.min.js}"></script>&ndash;&gt;-->
+
+<!--    &lt;!&ndash; placeholder for additional links &ndash;&gt;-->
+<!--    <th:block th:replace="${links}" />-->
+
+<!--</head>-->
+
+<!--optional fragment parameter-->
+<head th:fragment="baseHead(title)" th:with="links=${links} ? ${links} : ''">
+
+    <title th:replace="${title}">Atta | Founder. Developer. Blogger.</title>
+
+    <!-- default styles and scripts -->
+    <!--    <link rel="shortcut icon" th:href="@{/images/favicon.ico}">-->
+    <!--    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">-->
+    <!--    <script th:src="@{/js/jquery.min.js}"></script>-->
+
+    <!-- placeholder for additional links -->
+    <th:block th:text="${links}" />
+
+<!--    <span th:if="${someObject.someProperty != null}" th:text="${someObject.someProperty}">someValue</span>-->
+
+    <div th:fragment="printGreetings (name)" th:with="title=${title} ? ${title} : '', greeting=${greeting} ? 'Hello'">
+        <span th:text="${greeting}">Hello</span>
+        <span th:text="${title}">Mr.</span>
+        <span th:text="${name}">John Doe</span>
+<!--        <th:block th:include="${title}" />-->
+    </div>
+
+</head>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/base :: baseHead(~{::title}, ~{::link})">
+
+    <title>Introduction to Thymeleaf Fragments | Atta Blog</title>
+    <title> Blog</title>
+<!--    <title></title>-->
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+<!--    <link rel="stylesheet" th:href="@{/css/style1.css}">-->
+
+</head>
+<body>
+<h1>Testing head fragment</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores distinctio enim et magnam magni nulla
+    obcaecati, odit officia, praesentium provident qui quis temporibus! Aut iure obcaecati quam tempore veritatis.</p>
+</body>
+
+<div th:replace="fragments/base :: printGreetings (name='joy', title='M')">
+    Hello Mr. Daniel
+</div>
+
+<!--<div th:replace="fragments/base :: printGreetings (name='joy')">-->
+<!--    Hello Mr. Daniel-->
+<!--</div>-->
+
+
+
+</html>

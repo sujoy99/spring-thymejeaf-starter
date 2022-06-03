@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf Application - Bootstrap Select Option</title>
+
+    <link th:rel="stylesheet" th:href="@{assets/bootstrap-select-1.13.9/dist/css/bootstrap-select.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+
+<div class="container">
+    <br><br>
+    <div class="row">
+        <form name="form1" id="form1" >
+            <div class="form-group">
+                <label for="info">Info</label>
+                <input type="text" class="form-control" id="info"  placeholder="Enter info">
+            </div>
+            <br><br>
+            Topics: <select name="topic" id="topic">
+            <option value="" selected="selected">Please select subject first</option>
+        </select>
+            <br><br>
+            Chapters: <select name="chapter" id="chapter">
+            <option value="" selected="selected">Please select topic first</option>
+        </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{assets/bootstrap-select-1.13.9/dist/js/bootstrap-select.js}"></script>
+
+</body>
+</html>

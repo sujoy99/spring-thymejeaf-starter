@@ -20,4 +20,9 @@ public class MainController {
     public String fragment(){
         return "fragment";
     }
+
+    @GetMapping("/student")
+    public String log(){
+        return "student";
+    }
 }
